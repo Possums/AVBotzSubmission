@@ -1,0 +1,6 @@
+I would choose shared memory over pipes. This is because with shared memory, multiple programs are able to access the data simultaneously. 
+This is important because the submarine needs to be able to react to data that is receives. For example, after measuring the time delay between 
+the receivers, multiple programs may be needed to guide the submarine to the location. Instead of having to wait for each program to finish before
+starting the new one, as in pipes, all of the programs could take the data and process it simultaneously. Furthermore, executing a long pipeline could
+increase latency, which would result in the submarine not being able to react quickly. However, a drawback of using shared memory is that the code will
+be more complicated, and as a result harder to debug.
